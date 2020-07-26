@@ -1,0 +1,90 @@
+.formContainer {
+  @apply bg-white mx-2 my-auto rounded-lg shadow-lg;
+
+  .formBtnPass {
+    @apply mt-2 flex justify-between items-center flex-grow-0;
+    a:hover {
+      @apply text-teal-600;
+      transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+  }
+}
+
+.formLinks {
+  @apply text-center underline font-semibold;
+
+  a:hover {
+    @apply text-teal-600;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+}
+
+.formTitle {
+  @apply text-2xl text-center py-5 font-black;
+}
+
+.btnForms {
+  @apply transition duration-300 ease-in-out bg-teal-500 rounded-sm py-3 px-5 font-black;
+
+  &:hover {
+    @apply bg-teal-600 text-white;
+  }
+}
+
+.inputForms {
+  @apply rounded-sm py-2 px-3 outline-none;
+  border: 2px solid #ccc;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  &:focus-within {
+    @apply border-teal-500;
+  }
+}
+
+form {
+  @apply mb-8 text-left w-full;
+  min-width: 250px;
+
+  li {
+    @apply flex flex-col py-2;
+
+    label {
+      @apply text-base font-black py-1;
+    }
+  }
+}
+
+.statusForm {
+  min-width: 100px;
+  max-width: 120px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+@screen md {
+  .formContainer {
+    @apply text-xl w-4/6;
+  }
+  form {
+    li {
+      label {
+        @apply text-xl py-1;
+      }
+    }
+  }
+}
+
+@screen lg {
+  .formContainer {
+    @apply w-3/4;
+    .formTitle {
+      @apply text-4xl;
+    }
+  }
+}
+
+@screen xl {
+  .formContainer {
+    @apply w-2/5;
+  }
+}

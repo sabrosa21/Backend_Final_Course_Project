@@ -1,0 +1,63 @@
+table {
+  @apply w-full;
+
+  tbody {
+    @apply overflow-y-scroll w-full;
+    tr {
+      &:nth-child(even) {
+        background-color: rgb(227, 229, 230);
+      }
+      &:nth-child(odd) {
+        background-color: rgb(244, 246, 247);
+      }
+    }
+  }
+}
+
+thead {
+  border-bottom: 2px solid #d3dde6;
+  color: rgb(51, 49, 49);
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+tr + tr {
+  border-top: 1px solid #d3dde6;
+}
+
+td,
+th {
+  padding: 8px;
+  vertical-align: middle;
+  &:not(:nth-child(2)) {
+    text-align: center;
+  }
+}
+
+tfoot {
+  border-top: 1px solid #d3dde6;
+  color: rgb(51, 49, 49);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.employeeTitle {
+  text-align: left !important;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #d5f5f4;
+  position: sticky;
+  top: 0;
+}
+
+.tableDiv {
+  height: 70vh;
+}
+
+.btnTable {
+  width: 46px;
+}

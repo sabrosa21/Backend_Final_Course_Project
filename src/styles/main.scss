@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600,800&display=swap");
+
+//---Tailwind includes
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import "forms";
+@import "tables";
+@import "components";
+@import "utilities";
+@import "charts";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+  background-color: #cacbcc;
+  min-height: 100vh;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "main" "footer";
+  margin: 0;
+  width: 100%;
+}
+
+.main {
+  grid-area: main;
+  width: 100%;
+}
+
+.menuIcon {
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.sidebarNav {
+  grid-area: sidenav;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  overflow-y: auto;
+  transform: translateX(-250px);
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  background-color: #151a24;
+  color: white;
+}
+
+.sidebarNav.active {
+  transform: translateX(0);
+}
+
+.footer {
+  grid-area: footer;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #a9a9aa;
+}
+
+.appTitle {
+  @apply mt-10 text-2xl font-black text-teal-400 tracking-wide;
+}
+
+.secTitle {
+  @apply font-black text-3xl my-3 text-teal-600;
+}
+
+.weatherIcon {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+/* --------------------------- MEDIA QUERY TABLET --------------------------- */
+@screen md {
+  .appTitle {
+    @apply mt-10 text-5xl;
+  }
+}
+
+/* ----------------------------- MEDIA QUERY PC ----------------------------- */
+@screen lg {
+  .containerGrid {
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidenav main";
+  }
+
+  .sidenav__close-icon,
+  .menuIcon {
+    visibility: hidden;
+  }
+
+  .appTitle {
+    @apply text-6xl;
+  }
+
+  .secTitle {
+    @apply text-5xl;
+  }
+}

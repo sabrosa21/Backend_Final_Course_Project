@@ -1,0 +1,37 @@
+%tag {
+  border-radius: 2px;
+  border: 1px solid transparent;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 900;
+  padding: 4px;
+  text-transform: uppercase;
+}
+//--- Style the status and level columns
+.t0,
+.u1 {
+  @extend %tag;
+  color: #ce9626;
+}
+.t1,
+.u2 {
+  @extend %tag;
+  color: #38a169;
+}
+.t2,
+.u0 {
+  @extend %tag;
+  color: #e53e3e;
+}
+
+//--- Styles the avatar
+.avatar {
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  float: left;
+  filter: grayscale(1);
+  height: 32px;
+  margin: 0 8px 0 0;
+  width: 32px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "expensetracker",
+  "version": "1.0.0",
+  "description": "<pre>composer install</pre>",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel-minify": "^0.5.1",
+    "gulp-hash-src": "^0.1.6",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "author": "Eurico Correia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabrosa21/Backend_Final_Project/issues"
+  },
+  "homepage": "https://github.com/sabrosa21/Backend_Final_Project#readme"
+}
